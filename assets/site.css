@@ -1,0 +1,269 @@
+/* Jassly website: the app's palette and type, light and dark. */
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("/assets/fonts/YoungSerif-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/assets/fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("/assets/fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f2eee4;
+  --surface: #fbf9f4;
+  --surface-strong: #e7e0cf;
+  --ink: #1b241f;
+  --muted: #4f5c55;
+  --primary: #1f5a41;
+  --on-primary: #ffffff;
+  --accent: #85540f;
+  --line: #cfc6b2;
+  --board: #233229;
+  --chalk: #f4f1e8;
+  --chalk-accent: #e3c26b;
+  --wood: #8a5a3b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101713;
+    --surface: #1a2520;
+    --surface-strong: #26332c;
+    --ink: #ede9dc;
+    --muted: #aab5ad;
+    --primary: #7cc9a0;
+    --on-primary: #0b1810;
+    --accent: #e3c26b;
+    --line: #3a4a41;
+    --board: #1a261f;
+    --wood: #6e4a31;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 18px/1.55 "Atkinson Hyperlegible", system-ui, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: var(--primary);
+  text-underline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+  margin-top: 1.6em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 1.4em;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.prose {
+  max-width: 720px;
+}
+
+/* Header and footer */
+
+.site-header {
+  padding: 18px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  font: 400 1.6rem "Young Serif", Georgia, serif;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+}
+
+.site-footer {
+  margin-top: 64px;
+  padding: 28px 0 40px;
+  border-top: 1.5px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-bottom: 10px;
+}
+
+/* Landing page */
+
+.hero {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  padding: 24px 0 8px;
+}
+
+.hero p.lead {
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 34em;
+}
+
+.soon {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+}
+
+.phones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.phones img {
+  width: min(44vw, 230px);
+  height: auto;
+  border-radius: 26px;
+  border: 6px solid var(--board);
+  box-shadow: 0 12px 30px rgb(0 0 0 / 0.18);
+}
+
+.phones img + img {
+  margin-top: 40px;
+}
+
+.cards {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.cards li {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+
+.cards strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.chalkboard {
+  background: var(--board);
+  color: var(--chalk);
+  border: 6px solid var(--wood);
+  border-radius: 22px;
+  padding: 22px 24px;
+}
+
+.chalkboard h2 {
+  margin-top: 0;
+  color: var(--chalk);
+}
+
+.prices {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prices li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgb(244 241 232 / 0.2);
+  padding-bottom: 8px;
+}
+
+.prices .price {
+  font-family: "Young Serif", Georgia, serif;
+  color: var(--chalk-accent);
+  white-space: nowrap;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 760px) {
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+    padding-top: 40px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chalkboard .note {
+  color: rgb(244 241 232 / 0.75);
+}
+
+.faq h3 {
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.95rem;
+}

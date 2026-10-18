@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz – Jassly</title>
+<meta name="description" content="Wie Jassly mit deinen Daten umgeht: was auf dem Handy bleibt, was beim Foto passiert und wer daran beteiligt ist.">
+<meta name="theme-color" content="#1f5a41">
+<link rel="icon" href="/assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="44" height="44">Jassly</a>
+  </div>
+</header>
+<main class="wrap">
+<div class="prose">
+<h1>Datenschutz</h1>
+<p class="updated">Stand: 18. Oktober 2026</p>
+<p>Jassly braucht so wenig Daten wie möglich: kein Konto, keine Werbung, kein Tracking. Hier steht, welche Daten trotzdem anfallen, wofür und wer sie bearbeitet.</p>
+
+<h2>Verantwortlich</h2>
+<p>wildTec, E-Mail <a href="mailto:hallo@jassly.ch">hallo@jassly.ch</a>. Für Fragen zum Datenschutz und für Anfragen zu deinen Daten wende dich an diese Adresse.</p>
+
+<h2>Was nur auf deinem Handy bleibt</h2>
+<p>Spieler, Spiele, Runden und Einstellungen speichert Jassly nur auf deinem Gerät. Wir sehen sie nicht. Löschst du die App, sind sie gelöscht.</p>
+
+<h2>Anonymes Konto</h2>
+<p>Damit Gratis-Abend, Pässe und Abo funktionieren, meldet sich die App beim ersten Start anonym an. Dafür nutzen wir <strong>Firebase Authentication</strong> von Google. Es entsteht eine zufällige Kennung ohne Namen, E-Mail-Adresse oder Telefonnummer. Google bearbeitet dabei technische Daten wie die IP-Adresse, um die Anmeldung abzusichern.</p>
+<p>Zu dieser Kennung speichern wir in <strong>Google Cloud Firestore</strong> (Rechenzentrum Zürich):</p>
+<ul>
+  <li>ob der Gratis-Abend genutzt ist, bis wann ein Pass läuft, wie viele Pässe noch offen sind und bis wann das Abo läuft;</li>
+  <li>für jedes erkannte Foto: Zeitpunkt, verwendetes KI-Modell, Umfang (Token) und Kosten. Nicht das Foto und nicht die erkannten Karten. Diese Einträge werden nach 12 Monaten automatisch gelöscht.</li>
+</ul>
+<p>Mit <strong>Firebase App Check</strong> prüfen wir, dass Anfragen von einer echten Jassly-App kommen. Dazu bestätigen Apple (App Attest) bzw. Google (Play Integrity) die Echtheit der App; wir speichern dabei nichts über dein Gerät.</p>
+
+<h2>Wenn du Karten fotografierst</h2>
+<p>Das Foto geht verschlüsselt an unseren Server (<strong>Google Cloud Functions</strong>, Rechenzentrum Zürich) und von dort an <strong>Anthropic</strong> (Claude API, USA), das die Karten erkennt. Die App erhält nur die Liste der Karten zurück. Wir speichern das Foto nicht.</p>
+<p>Anthropic verwendet Daten aus der API nicht zum Trainieren seiner Modelle und speichert sie nur befristet, unter anderem zur Missbrauchserkennung. Fotografiere bitte nur die Karten, keine Personen.</p>
+<p>Unsere Server protokollieren technische Zugriffsdaten (z. B. IP-Adresse, Zeitpunkt, Fehlermeldungen), um Fehler zu finden und Missbrauch abzuwehren. Diese Protokolle werden nach 30 Tagen gelöscht.</p>
+
+<h2>Käufe</h2>
+<p>Pässe und das Abo kaufst du über den <strong>App Store</strong> von Apple oder <strong>Google Play</strong>. Zahlungsdaten bearbeiten nur Apple bzw. Google; wir erhalten sie nie. Die Käufe verwalten wir mit <strong>RevenueCat</strong> (RevenueCat, Inc., USA). RevenueCat erhält dafür die anonyme Kennung, das gekaufte Produkt, Zeitpunkt, Land und die Kaufbestätigung des Stores, und meldet uns, welche Pässe oder welches Abo zur Kennung gehören.</p>
+
+<h2>Was wir nicht tun</h2>
+<p>Keine Werbung, keine Analyse- oder Tracking-Werkzeuge, kein Verkauf oder Weitergabe von Daten zu Werbezwecken. Die App fragt nur nach der Kamera, und nur wenn du ein Foto machst.</p>
+
+<h2>Bearbeitung im Ausland</h2>
+<p>Anthropic und RevenueCat sitzen in den USA; auch Google bearbeitet Daten teils ausserhalb der Schweiz. Für diese Übermittlungen stützen wir uns auf die vertraglichen Datenschutzgarantien der Anbieter (insbesondere Standardvertragsklauseln) bzw. auf deren Zertifizierung unter dem Swiss-U.S. und EU-U.S. Data Privacy Framework.</p>
+
+<h2>Wie lange wir Daten aufbewahren</h2>
+<ul>
+  <li>Einträge zu erkannten Fotos: 12 Monate.</li>
+  <li>Server-Protokolle: 30 Tage.</li>
+  <li>Gratis-Abend, Pässe und Abo: solange sie gebraucht werden, längstens bis du die Löschung verlangst.</li>
+</ul>
+
+<h2>Deine Rechte</h2>
+<p>Du kannst Auskunft über deine Daten verlangen, sie berichtigen oder löschen lassen und der Bearbeitung widersprechen. Wie das Löschen geht, steht in der <a href="/hilfe/#daten-loeschen">Hilfe</a>. Schreib an <a href="mailto:hallo@jassly.ch">hallo@jassly.ch</a>. Du kannst dich ausserdem beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) beschweren, in der EU bei der Aufsichtsbehörde deines Landes.</p>
+<p>Massgebend sind das Schweizer Datenschutzgesetz (DSG) und, soweit anwendbar, die EU-Datenschutz-Grundverordnung (DSGVO). Rechtsgrundlagen nach DSGVO sind die Erfüllung des Vertrags (Pässe, Abo, Kartenerkennung) und unser berechtigtes Interesse an einem sicheren Betrieb (Protokolle, App Check, Missbrauchsschutz).</p>
+
+<h2>Diese Webseite</h2>
+<p>jassly.ch wird von <strong>GitHub Pages</strong> (GitHub, Inc., USA) ausgeliefert. GitHub protokolliert dabei technische Daten wie die IP-Adresse, um den Dienst zu betreiben und abzusichern. Die Webseite setzt keine Cookies, nutzt keine Analyse-Werkzeuge und lädt die Schriften von jassly.ch selbst.</p>
+
+<h2>Änderungen</h2>
+<p>Ändert sich etwas an der App oder an den Diensten, passen wir diese Erklärung an. Es gilt die hier veröffentlichte Fassung.</p>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Rechtliches und Hilfe">
+      <a href="/hilfe/">Hilfe</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
+      <a href="/impressum/">Impressum</a>
+    </nav>
+    <div>© 2026 wildTec</div>
+  </div>
+</footer>
+</body>
+</html>
