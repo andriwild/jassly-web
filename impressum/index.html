@@ -5,18 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Impressum – Jassly</title>
 <meta name="description" content="Impressum von jassly.ch.">
-<meta name="theme-color" content="#1f5a41">
+<meta name="theme-color" content="#f2eee4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101713" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jassly">
+<meta property="og:title" content="Impressum – Jassly">
+<meta property="og:description" content="Impressum von jassly.ch.">
+<meta property="og:image" content="https://jassly.ch/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<link rel="preload" href="/assets/fonts/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="44" height="44">Jassly</a>
+  <div class="wrap header-row">
+    <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="36" height="36"><span>Jassly</span></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/#so-gehts">So geht's</a>
+<a href="/#funktionen">Funktionen</a>
+<a href="/#preise">Preise</a>
+<a href="/hilfe/">Hilfe</a>
+    </nav>
+    <a class="btn btn-small header-cta" href="/#laden">App laden</a>
+    <details class="menu">
+      <summary aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </summary>
+      <nav class="menu-panel" aria-label="Menü">
+        <a href="/#so-gehts">So geht's</a>
+<a href="/#funktionen">Funktionen</a>
+<a href="/#preise">Preise</a>
+<a href="/hilfe/">Hilfe</a>
+      </nav>
+    </details>
   </div>
 </header>
-<main class="wrap">
+<main>
+<div class="wrap page">
 <div class="prose">
 <h1>Impressum</h1>
 <p><strong>Anbieter von Jassly und jassly.ch</strong><br>wildTec<br>E-Mail: <a href="mailto:hallo@jassly.ch">hallo@jassly.ch</a></p>
@@ -25,16 +54,39 @@
 <h2>Schriften</h2>
 <p>Die Schriften Young Serif und Atkinson Hyperlegible stehen unter der SIL Open Font License (<a href="/assets/fonts/OFL-YoungSerif.txt">Young Serif</a>, <a href="/assets/fonts/OFL-AtkinsonHyperlegible.txt">Atkinson Hyperlegible</a>) und werden von dieser Webseite selbst ausgeliefert.</p>
 </div>
+</div>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Rechtliches und Hilfe">
-      <a href="/hilfe/">Hilfe</a>
-      <a href="/datenschutz/">Datenschutz</a>
-      <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
-      <a href="/impressum/">Impressum</a>
-    </nav>
-    <div>© 2026 wildTec</div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="36" height="36"><span>Jassly</span></a>
+        <p>Die Jasstafel, die selbst zählt. Für Schieber und Differenzler, gemacht in der Schweiz.</p>
+      </div>
+      <nav aria-label="App">
+        <h2>App</h2>
+        <a href="/#so-gehts">So geht's</a>
+        <a href="/#funktionen">Funktionen</a>
+        <a href="/#preise">Preise</a>
+        <a href="/#fragen">Fragen</a>
+      </nav>
+      <nav aria-label="Hilfe">
+        <h2>Hilfe</h2>
+        <a href="/hilfe/">Hilfe und FAQ</a>
+        <a href="/hilfe/#daten-loeschen">Daten löschen</a>
+        <a href="mailto:hallo@jassly.ch">hallo@jassly.ch</a>
+      </nav>
+      <nav aria-label="Rechtliches">
+        <h2>Rechtliches</h2>
+        <a href="/datenschutz/">Datenschutz</a>
+        <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p>© 2026 wildTec</p>
+      <p>Apple, das Apple-Logo, iPhone und App Store sind Marken von Apple Inc., eingetragen in den USA und weiteren Ländern. Google Play und das Google Play-Logo sind Marken von Google LLC.</p>
+    </div>
   </div>
 </footer>
 </body>

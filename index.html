@@ -3,63 +3,311 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jassly – Karten fotografieren, Punkte stehen</title>
-<meta name="description" content="Jassly zählt die Karten eines Stapels per Foto und führt die Tafel für Schieber und Differenzler.">
-<meta name="theme-color" content="#1f5a41">
+<title>Jassly – Fotografieren statt zählen</title>
+<meta name="description" content="Jassly zählt die Karten eines Stapels per Foto und schreibt die Punkte auf die Tafel. Für Schieber und Differenzler, ohne Konto und ohne Werbung.">
+<meta name="theme-color" content="#f2eee4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101713" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jassly">
+<meta property="og:title" content="Jassly – Fotografieren statt zählen">
+<meta property="og:description" content="Jassly zählt die Karten eines Stapels per Foto und schreibt die Punkte auf die Tafel. Für Schieber und Differenzler, ohne Konto und ohne Werbung.">
+<meta property="og:image" content="https://jassly.ch/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<link rel="preload" href="/assets/fonts/YoungSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="44" height="44">Jassly</a>
+  <div class="wrap header-row">
+    <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="36" height="36"><span>Jassly</span></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/#so-gehts">So geht's</a>
+<a href="/#funktionen">Funktionen</a>
+<a href="/#preise">Preise</a>
+<a href="/hilfe/">Hilfe</a>
+    </nav>
+    <a class="btn btn-small header-cta" href="/#laden">App laden</a>
+    <details class="menu">
+      <summary aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </summary>
+      <nav class="menu-panel" aria-label="Menü">
+        <a href="/#so-gehts">So geht's</a>
+<a href="/#funktionen">Funktionen</a>
+<a href="/#preise">Preise</a>
+<a href="/hilfe/">Hilfe</a>
+      </nav>
+    </details>
   </div>
 </header>
-<main class="wrap">
+<main>
 <section class="hero">
-  <div>
-    <h1>Fotografieren statt zählen.</h1>
-    <p class="lead">Jassly zählt die Karten eines Stapels per Foto und führt die Tafel. Für Schieber und Differenzler, mit deutschschweizer und französischen Karten.</p>
-    <span class="soon">Bald für iPhone und Android</span>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Die Jasstafel für Schieber und Differenzler</p>
+      <h1>Fotografieren statt zählen.</h1>
+      <p class="lead">Stiche auffächern, ein Foto machen: Jassly erkennt die Karten, zählt die Punkte und schreibt sie auf die Tafel.</p>
+      <div id="laden"><div class="store">
+  <div class="badges">
+    <span class="badge" role="img" aria-label="Laden im App Store, bald verfügbar"><img src="/assets/img/badges/app-store-de.svg" alt="" width="150" height="50"></span>
+    <span class="badge" role="img" aria-label="Jetzt bei Google Play, bald verfügbar"><img src="/assets/img/badges/google-play-de.png" alt="" width="168" height="50"></span>
   </div>
-  <div class="phones">
-    <img src="/assets/img/board_light.jpg" alt="Tafel eines Schiebers mit den Punkten beider Teams" width="462" height="1000">
-    <img src="/assets/img/round_3_cards.jpg" alt="Erkannte Karten im Raster, zwei davon zum Prüfen markiert" width="462" height="1000">
+  <p class="store-note">Bald für iPhone und Android</p>
+</div></div>
+      <ul class="hero-points">
+        <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Erster Abend gratis</li>
+        <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ohne Konto</li>
+        <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ohne Werbung</li>
+      </ul>
+    </div>
+    <div class="hero-visual">
+      <img class="phone" src="/assets/img/screens/camera.webp" srcset="/assets/img/screens/camera-small.webp 450w, /assets/img/screens/camera.webp 900w" sizes="(min-width: 960px) 260px, 40vw" width="900" height="1837" alt="Jassly-Kamera: aufgefächerte Jasskarten auf einem Holztisch im Sucher" fetchpriority="high">
+      <img class="phone phone-low" src="/assets/img/screens/cards.webp" srcset="/assets/img/screens/cards-small.webp 450w, /assets/img/screens/cards.webp 900w" sizes="(min-width: 960px) 260px, 40vw" width="900" height="1837" alt="Erkannte Karten: 94 Punkte für Ruedi und Vreni, 19 Karten im Raster markiert">
+    </div>
   </div>
 </section>
 
-<h2>So geht's</h2>
-<ul class="cards">
-  <li><strong>Modus wählen</strong>Trumpf, Obenabe oder Undenufe, dazu Weisen und Stöck.</li>
-  <li><strong>Stapel fotografieren</strong>Jassly erkennt die Karten in wenigen Sekunden. Unsichere Karten markiert es zum Prüfen.</li>
-  <li><strong>Punkte stehen</strong>Mit letztem Stich, Matsch und Multiplikator direkt auf der Tafel.</li>
-</ul>
+<section class="section" id="so-gehts">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">So geht's</p>
+      <h2>Drei Schritte pro Runde</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="step-number">1</span>
+        <h3>Runde ansagen</h3>
+        <p>Wer sagt an, Trumpf, Obenabe oder Undenufe, geschoben oder nicht. Dazu Weis und Stöck.</p>
+      </li>
+      <li>
+        <span class="step-number">2</span>
+        <h3>Stiche fotografieren</h3>
+        <p>Karten auffächern, so dass jede Ecke sichtbar ist, und ein Foto machen. Jassly erkennt die Karten.</p>
+      </li>
+      <li>
+        <span class="step-number">3</span>
+        <h3>Punkte stehen</h3>
+        <p>Mit letztem Stich, Matsch und Multiplikator. Die Gegenpartei rechnet Jassly gleich mit.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-<h2>Ohne Konto, ohne Werbung</h2>
-<p class="prose">Keine Registrierung, keine Werbung, kein Tracking. Spiele und Spieler bleiben auf deinem Handy. Ein Handy pro Tisch genügt.</p>
+<section class="section section-tint" id="funktionen">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Funktionen</p>
+      <h2>Alles, was auf die Jasstafel gehört</h2>
+    </div>
 
-<section class="chalkboard">
-  <h2>Preise</h2>
-  <ul class="prices">
-    <li><span>Tafel, Regelwerk, Karten von Hand antippen</span><span class="price">gratis</span></li>
-    <li><span>Erster Abend mit Kamera</span><span class="price">gratis</span></li>
-    <li><span>Jassabend-Pass, 24 Stunden Kamera</span><span class="price">CHF 1.–</span></li>
-    <li><span>5er-Pack Jassabend-Pässe</span><span class="price">CHF 4.–</span></li>
-    <li><span>Jahresabo, Kamera für alle Abende</span><span class="price">CHF 19.–</span></li>
-  </ul>
-  <p class="note">Bezahlt wird über den App Store oder Google Play. Das Abo verlängert sich jährlich und lässt sich jederzeit in den Store-Einstellungen kündigen.</p>
+    <article class="feature">
+      <div class="feature-text">
+        <h3>Die Tafel führt sich selbst</h3>
+        <p>Punkte, Weis und Stöck, Matsch und Multiplikator: Jassly rechnet alles zusammen und zeigt, wer als Nächstes ansagt.</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Verlauf aller Runden auf einen Blick</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Letzte Runde ändern oder rückgängig machen</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Zielpunkte frei wählbar</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <img class="phone" src="/assets/img/screens/board.webp" srcset="/assets/img/screens/board-small.webp 450w, /assets/img/screens/board.webp 900w" sizes="(min-width: 960px) 280px, 60vw" width="900" height="1837" alt="Tafel eines Schiebers: 1'050 zu 2'420 Punkte, nächste Ansage und Verlauf von fünf Runden" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-text">
+        <h3>Jede Ansage, eure Multiplikatoren</h3>
+        <p>Trumpf, Obenabe und Undenufe, mit den Multiplikatoren, die an eurem Tisch gelten. Für deutschschweizer und französische Karten.</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Weis und Stöck mit einem Tipp</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Karten auch von Hand antippen</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Regelwerk zum Nachschlagen eingebaut</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <img class="phone" src="/assets/img/screens/mode.webp" srcset="/assets/img/screens/mode-small.webp 450w, /assets/img/screens/mode.webp 900w" sizes="(min-width: 960px) 280px, 60vw" width="900" height="1837" alt="Spielmodus wählen: Eicheln, Schellen, Rosen, Schilten, Obenabe und Undenufe mit Multiplikator" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-text">
+        <h3>Auch für den Differenzler</h3>
+        <p>Ansagen eintragen, Stiche fotografieren, fertig: Jassly rechnet die Differenzen und führt die Rangliste über alle Runden.</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Ansagen für alle vier am Tisch</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Rangliste nach jeder Runde</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Anzahl Runden frei wählbar</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <img class="phone" src="/assets/img/screens/differenzler.webp" srcset="/assets/img/screens/differenzler-small.webp 450w, /assets/img/screens/differenzler.webp 900w" sizes="(min-width: 960px) 280px, 60vw" width="900" height="1837" alt="Differenzler: Rangliste mit Ansagen und Differenzen von Trudi, Köbi, Ruedi und Vreni" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-text">
+        <h3>Hell in der Stube, dunkel in der Beiz</h3>
+        <p>Jassly folgt dem hellen oder dunklen Modus deines Handys. Grosse Zahlen und klare Schrift, damit alle am Tisch mitlesen.</p>
+      </div>
+      <div class="feature-visual">
+        <img class="phone" src="/assets/img/screens/board_dark.webp" srcset="/assets/img/screens/board_dark-small.webp 450w, /assets/img/screens/board_dark.webp 900w" sizes="(min-width: 960px) 280px, 60vw" width="900" height="1837" alt="Die Tafel im dunklen Modus" loading="lazy">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ohne Schnickschnack</p>
+      <h2>Einfach jassen</h2>
+    </div>
+    <ul class="perks">
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c.8-3.6 3.8-5.5 7.5-5.5s6.7 1.9 7.5 5.5"/></svg><h3>Ohne Konto</h3><p>Keine Registrierung, keine E-Mail-Adresse. App öffnen und loslegen.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.7 5.7l12.6 12.6"/></svg><h3>Ohne Werbung</h3><p>Keine Werbung, kein Tracking, keine Analyse-Werkzeuge.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><h3>Daten bleiben bei dir</h3><p>Spiele und Spieler liegen nur auf deinem Handy.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3.5" y="6" width="10" height="14" rx="1.5" transform="rotate(-10 8.5 13)"/><rect x="10.5" y="4" width="10" height="14" rx="1.5" transform="rotate(8 15.5 11)"/></svg><h3>Beide Kartensets</h3><p>Deutschschweizer und französische Jasskarten.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0"/><path d="M5.5 12.5a9.5 9.5 0 0 1 13 0"/><path d="M8.7 15.9a5 5 0 0 1 6.6 0"/><circle cx="12" cy="19.3" r=".9"/><path d="M3.5 3.5l17 17"/></svg><h3>Auch ohne Netz</h3><p>Tafel und Zählen von Hand gehen offline. Nur die Kamera braucht Internet.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="12" cy="20.5" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="20.5" cy="12" r="1.5"/></svg><h3>Ein Handy pro Tisch</h3><p>Eine Person führt die Tafel, alle anderen jassen weiter.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-tint" id="preise">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Preise</p>
+      <h2>Zählen von Hand ist immer gratis</h2>
+      <p>Für die Kamera zahlst du nur an den Abenden, an denen du sie brauchst. Oder einmal im Jahr.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3>Gratis</h3>
+        <p class="plan-price"><span class="amount">CHF 0</span><span class="per">für immer</span></p>
+        <p class="plan-lead">Für jeden Jass</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Tafel für Schieber und Differenzler</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Karten von Hand antippen</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Regelwerk</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Erster Abend mit Kamera</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3>Jassabend-Pass</h3>
+        <p class="plan-price"><span class="amount">CHF 1.–</span><span class="per">pro Abend</span></p>
+        <p class="plan-lead">Für den gelegentlichen Jass</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>24 Stunden Kamera ab dem ersten Foto</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Einmal zahlen, kein Abo</li>
+        </ul>
+      </article>
+      <article class="plan">
+        <h3>5er-Pack</h3>
+        <p class="plan-price"><span class="amount">CHF 4.–</span><span class="per">für 5 Abende</span></p>
+        <p class="plan-lead">CHF –.80 pro Abend</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Fünf Jassabend-Pässe</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Jeder Pass startet einzeln</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kein Abo</li>
+        </ul>
+      </article>
+      <article class="plan plan-featured">
+        <p class="plan-tag">Für Stammtische</p>
+        <h3>Jahresabo</h3>
+        <p class="plan-price"><span class="amount">CHF 19.–</span><span class="per">pro Jahr</span></p>
+        <p class="plan-lead">Für alle, die jede Woche jassen</p>
+        <ul class="checks">
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Kamera an allen Abenden</li>
+          <li><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Jederzeit im Store kündbar</li>
+        </ul>
+      </article>
+    </div>
+    <p class="plans-note">Bezahlt wird über den App Store oder Google Play. Das Jahresabo verlängert sich automatisch um ein Jahr, wenn du es nicht spätestens 24 Stunden vor Ablauf kündigst. Details in den <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="fragen">
+  <div class="wrap faq-grid">
+    <div class="section-head">
+      <p class="eyebrow">Fragen</p>
+      <h2>Gut zu wissen</h2>
+      <p>Weitere Antworten stehen in der <a href="/hilfe/">Hilfe</a>.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Brauche ich ein Konto?</summary>
+        <p>Nein. Jassly funktioniert ohne Registrierung. Spiele und Spieler bleiben auf deinem Handy.</p>
+      </details>
+      <details>
+        <summary>Was, wenn eine Karte falsch erkannt wird?</summary>
+        <p>Nach dem Foto zeigt Jassly alle 36 Karten im Raster. Unsichere Karten sind markiert, und jede Karte lässt sich mit einem Tipp hinzufügen oder entfernen.</p>
+      </details>
+      <details>
+        <summary>Was passiert mit meinen Fotos?</summary>
+        <p>Das Foto geht verschlüsselt an unseren Server in Zürich und zur Erkennung an Anthropic (Claude). Gespeichert wird es nicht. Mehr dazu im <a href="/datenschutz/">Datenschutz</a>.</p>
+      </details>
+      <details>
+        <summary>Geht das auch ohne Internet?</summary>
+        <p>Die Tafel und das Zählen von Hand ja. Nur die Kamera braucht eine Verbindung.</p>
+      </details>
+      <details>
+        <summary>Wie kündige ich das Jahresabo?</summary>
+        <p>In den Abo-Einstellungen deines Stores, auf dem iPhone unter Einstellungen → dein Name → Abonnements. Mehr in der <a href="/hilfe/">Hilfe</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta-inner">
+    <h2>Bereit für den nächsten Jassabend?</h2>
+    <p>Der erste Abend mit Kamera ist gratis.</p>
+    <div class="store">
+  <div class="badges">
+    <span class="badge" role="img" aria-label="Laden im App Store, bald verfügbar"><img src="/assets/img/badges/app-store-de.svg" alt="" width="150" height="50"></span>
+    <span class="badge" role="img" aria-label="Jetzt bei Google Play, bald verfügbar"><img src="/assets/img/badges/google-play-de.png" alt="" width="168" height="50"></span>
+  </div>
+  <p class="store-note">Bald für iPhone und Android</p>
+</div>
+  </div>
 </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <nav aria-label="Rechtliches und Hilfe">
-      <a href="/hilfe/">Hilfe</a>
-      <a href="/datenschutz/">Datenschutz</a>
-      <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
-      <a href="/impressum/">Impressum</a>
-    </nav>
-    <div>© 2026 wildTec</div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/"><img src="/assets/img/icon-192.png" alt="" width="36" height="36"><span>Jassly</span></a>
+        <p>Die Jasstafel, die selbst zählt. Für Schieber und Differenzler, gemacht in der Schweiz.</p>
+      </div>
+      <nav aria-label="App">
+        <h2>App</h2>
+        <a href="/#so-gehts">So geht's</a>
+        <a href="/#funktionen">Funktionen</a>
+        <a href="/#preise">Preise</a>
+        <a href="/#fragen">Fragen</a>
+      </nav>
+      <nav aria-label="Hilfe">
+        <h2>Hilfe</h2>
+        <a href="/hilfe/">Hilfe und FAQ</a>
+        <a href="/hilfe/#daten-loeschen">Daten löschen</a>
+        <a href="mailto:hallo@jassly.ch">hallo@jassly.ch</a>
+      </nav>
+      <nav aria-label="Rechtliches">
+        <h2>Rechtliches</h2>
+        <a href="/datenschutz/">Datenschutz</a>
+        <a href="/nutzungsbedingungen/">Nutzungsbedingungen</a>
+        <a href="/impressum/">Impressum</a>
+      </nav>
+    </div>
+    <div class="footer-legal">
+      <p>© 2026 wildTec</p>
+      <p>Apple, das Apple-Logo, iPhone und App Store sind Marken von Apple Inc., eingetragen in den USA und weiteren Ländern. Google Play und das Google Play-Logo sind Marken von Google LLC.</p>
+    </div>
   </div>
 </footer>
 </body>

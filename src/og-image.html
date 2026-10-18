@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Source of assets/img/og.jpg, the preview when the link is shared.
+     Open at exactly 1200×630 (python3 -m http.server, then
+     http://localhost:8000/src/og-image.html) and screenshot the viewport. -->
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<title>Jassly Vorschaubild</title>
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  :root { color-scheme: light; }
+  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+  body {
+    display: grid;
+    grid-template-columns: 1fr 540px;
+    align-items: center;
+    padding: 0 0 0 80px;
+    background: #f2eee4;
+    color: #1b241f;
+  }
+  .brand { color: #1b241f; font-size: 2.2rem; }
+  .brand img { width: 56px; height: 56px; border-radius: 14px; }
+  h1 { margin: 36px 0 18px; font-size: 5rem; }
+  p { margin: 0; color: #4f5c55; font-size: 1.7rem; }
+  .phones { position: relative; isolation: isolate; display: flex; gap: 22px; justify-content: center; }
+  .phones::before {
+    content: ""; position: absolute; inset: 40px -40px -80px 10px; z-index: -1;
+    border-radius: 48px; transform: rotate(-5deg);
+    background: radial-gradient(120% 90% at 30% 20%, #4a8a6c 0%, transparent 60%), linear-gradient(160deg, #1f5a41, #133826);
+  }
+  .phones img { width: 220px; }
+  .phones img + img { margin-top: 90px; }
+</style>
+</head>
+<body>
+  <div>
+    <span class="brand"><img src="/assets/img/icon-192.png" alt="">Jassly</span>
+    <h1>Fotografieren statt zählen.</h1>
+    <p>Die Jasstafel für Schieber und Differenzler</p>
+  </div>
+  <div class="phones">
+    <img src="/assets/img/screens/camera.webp" alt="">
+    <img src="/assets/img/screens/board.webp" alt="">
+  </div>
+</body>
+</html>
