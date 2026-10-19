@@ -2,6 +2,13 @@
 
 Landing page, help, privacy policy, terms and imprint of the Jassly app. Plain HTML and CSS, served by GitHub Pages from `main`.
 
+## Domain and mail
+
+jassly.ch is registered at Hostpoint, which also hosts its DNS zone. The zone holds only what this site and the mail need:
+
+- A and AAAA records for `jassly.ch` pointing to GitHub Pages (185.199.108–111.153, 2606:50c0:8000–8003::153), and `www` as CNAME to `andriwild.github.io.`; the `CNAME` file in this repository names the domain.
+- MX records to ImprovMX (`mx1.improvmx.com` priority 10, `mx2.improvmx.com` priority 20) and the SPF record `v=spf1 include:spf.improvmx.com ~all`. ImprovMX's free plan forwards `hallo@jassly.ch` to a private inbox; replies go out from that inbox.
+
 ## Editing
 
 The pages live in `src/pages/`, the shared head, header and footer in `src/layout.html` and `src/partials/`. After a change, build and commit the generated files with the sources:
