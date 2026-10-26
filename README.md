@@ -24,6 +24,7 @@ Never edit the generated HTML in the root or the page folders by hand; `build.py
 
 - `assets/img/screens/`: iPhone screenshots in Apple's device frame. They are taken on the iOS simulator with `tool/showcase` in the app repository and framed with mokkr (preset `presets/jassly-website.json`), then copied here without the number prefix.
 - `assets/img/badges/`: the official store badges in German, unmodified. Apple's from the [App Store marketing tools](https://toolbox.marketingtools.apple.com/app-store/), Google's from the [Google Play badge page](https://play.google.com/intl/en_us/badges/) (transparent margin trimmed). Both are equally tall, as Google asks.
+- `favicon.ico`: the site icon at 32 and 48 px (PNGs in an ICO container) for crawlers that ask for it at the root; Google wants at least 48 px.
 - `assets/img/og.jpg`: the preview when the link is shared, a screenshot of `src/og-image.html` at 1200×630.
 - `assets/img/table.jpg`: one of our own photos of a Jass table, behind the closing call to action.
 
