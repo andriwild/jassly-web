@@ -14,7 +14,7 @@ jassly.ch is registered at Hostpoint, which also hosts its DNS zone. The zone ho
 The pages live in `src/pages/`, the shared head, header and footer in `src/layout.html` and `src/partials/`. After a change, build and commit the generated files with the sources:
 
 ```bash
-python3 build.py              # writes index.html, hilfe/index.html, ...
+python3 build.py              # writes index.html, hilfe/index.html, ..., sitemap.xml
 python3 -m http.server 8000   # preview on http://localhost:8000
 ```
 

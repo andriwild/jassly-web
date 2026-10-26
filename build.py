@@ -10,7 +10,8 @@ Each page starts with a comment holding its title and description:
 
 `{{> name}}` includes src/partials/name.html, in pages and in the layout.
 src/pages/hilfe.html becomes hilfe/index.html; index.html and 404.html keep
-their names. Python 3 standard library only.
+their names. sitemap.xml lists every page but 404.html. Python 3 standard
+library only.
 """
 
 import pathlib
@@ -18,6 +19,7 @@ import re
 
 ROOT = pathlib.Path(__file__).parent
 SRC = ROOT / 'src'
+SITE = 'https://jassly.ch'
 FLAT = {'index', '404'}
 
 META = re.compile(r'\A<!--\n(.*?)\n-->\n', re.S)
@@ -48,10 +50,26 @@ def build(page, layout):
     return target.relative_to(ROOT)
 
 
+def sitemap(targets):
+    urls = ''.join(
+        f'  <url><loc>{SITE}/{t.as_posix().removesuffix("index.html")}</loc></url>\n'
+        for t in targets if t.name == 'index.html'
+    )
+    target = ROOT / 'sitemap.xml'
+    target.write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f'{urls}</urlset>\n'
+    )
+    return target.relative_to(ROOT)
+
+
 def main():
     layout = include((SRC / 'layout.html').read_text())
-    for page in sorted((SRC / 'pages').glob('*.html')):
-        print(build(page, layout))
+    targets = [build(page, layout) for page in sorted((SRC / 'pages').glob('*.html'))]
+    targets.append(sitemap(targets))
+    for target in targets:
+        print(target)
 
 
 if __name__ == '__main__':

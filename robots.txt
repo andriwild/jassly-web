@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jassly.ch/sitemap.xml
