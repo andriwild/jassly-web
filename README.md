@@ -28,10 +28,6 @@ Never edit the generated HTML in the root or the page folders by hand; `build.py
 - `assets/img/og.jpg`: the preview when the link is shared, a screenshot of `src/og-image.html` at 1200×630.
 - `assets/img/table.jpg`: one of our own photos of a Jass table, behind the closing call to action.
 
-## When the app is in the stores
-
-In `src/partials/badges.html`, turn each `<span class="badge">` into an `<a class="badge" href="…">` with the store link, drop "bald verfügbar" from the labels and remove the `store-note` line. Then build.
-
 ## Testimonials
 
 `src/partials/testimonials.html` holds the section, with placeholders. Only real quotes, with permission of the people quoted. Fill it in and add `{{> testimonials}}` to `src/pages/index.html`, between the perks and the prices.
